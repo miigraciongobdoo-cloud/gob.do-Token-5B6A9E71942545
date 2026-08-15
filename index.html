@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Residencia Temporal</title>
+    
+    <style>
+        /* Restablecimiento general */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+
+            /* Fondo con degradado multinivel */
+            background:
+                radial-gradient(circle at top left, rgba(58, 123, 213, 0.18), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(0, 120, 255, 0.16), transparent 40%),
+                linear-gradient(135deg, #f7fbff 0%, #dfeeff 50%, #c9ddff 100%);
+        }
+
+        /* Marca de agua central */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 550px;
+            height: 550px;
+            background: url("logo.png") center/contain no-repeat;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Tarjeta Principal */
+        .card {
+            width: 1000px;
+            max-width: 100%;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Encabezado */
+        .header {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Contenido principal */
+        .content {
+            display: flex;
+            padding: 35px;
+            gap: 35px;
+        }
+
+        /* Contenedor de la foto de perfil */
+        .foto-container {
+            width: 180px;
+            height: 220px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #f4f4f4;
+            border-radius: 6px;
+        }
+
+        .foto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sección de Información */
+        .info {
+            flex: 1;
+        }
+
+        .titulo {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .titulo h2 {
+            font-size: 34px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .sub {
+            font-size: 18px;
+        }
+
+        .nombre {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .datos p {
+            font-size: 22px;
+            margin: 18px 0;
+        }
+
+        .label {
+            display: inline-block;
+            width: 250px;
+            color: #666;
+        }
+
+        .valor {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .azul {
+            color: #2b63b6;
+            font-weight: bold;
+        }
+
+        /* Responsive para dispositivos móviles */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .foto-container {
+                width: 200px;
+                height: 240px;
+            }
+
+            .titulo h2 {
+                font-size: 24px;
+            }
+
+            .sub {
+                font-size: 15px;
+            }
+
+            .nombre {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .datos {
+                width: 100%;
+            }
+
+            .datos p {
+                font-size: 18px;
+            }
+
+            .label {
+                display: block;
+                width: auto;
+                margin-bottom: 5px;
+            }
+
+            body::before {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- ENCABEZADO -->
+        <div class="header">
+            <img src="logo.png" alt="Logo de la Institución">
+        </div>
+
+        <div class="content">
+
+            <!-- FOTO DE PERFIL -->
+            <div class="foto-container">
+                <img src="01.png" class="foto" alt="Foto de perfil">
+            </div>
+
+            <!-- INFORMACIÓN Y DATOS -->
+            <div class="info">
+
+                <div class="titulo">
+                    <h2>Plan Nacional de Regularización de Extranjeros</h2>
+                    <div class="sub">VALIDACIÓN DE RESIDENCIA TEMPORAL</div>
+                </div>
+
+                <div class="nombre">
+                    SYLFANA DUPERVIL
+                </div>
+
+                <div class="datos">
+                    <p>
+                        <span class="label">No. Único Expediente:</span>
+                        <span class="valor">01SD0404711</span>
+                    </p>
+
+                    <p>
+                        <span class="label">No. Pasaporte:</span>
+                        <span class="valor">R12925896</span>
+                    </p>
+
+                    <p>
+                        <span class="label">Fecha Nacimiento:</span>
+                        <span class="valor">03/05/1988</span>
+                    </p>
+
+                    <p>
+                        <span class="label">Fecha Vencimiento:</span>
+                        <span class="valor">14/08/2027</span>
+                    </p>
+
+                    <p>
+                        <span class="label">Categoría Migratoria:</span>
+                        <span class="azul">PERMISO TEMPORAL DE TRABAJO (TT-1)</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
